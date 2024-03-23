@@ -1,0 +1,27 @@
+`jq` and `yq` are both command-line tools for processing and manipulating JSON and YAML data respectively. Here's a brief description of each:
+
+1. **jq**:
+
+    - **Description**: `jq` is a lightweight and flexible command-line JSON processor. It allows you to extract, filter, transform, and manipulate JSON data efficiently. With `jq`, you can perform various operations such as selecting specific fields, filtering data based on conditions, applying transformations, and formatting JSON output.
+    
+    - **Usage Examples**:
+        - Extracting specific fields from JSON data: `jq '.field_name'`
+        - Filtering data based on conditions: `jq '.field_name | condition'`
+        - Transforming data: `jq 'map({new_field: .old_field})'`
+        - Formatting JSON output: `jq '.'`
+    
+    - **Installation**: `jq` is typically available in the package repositories of most Linux distributions and can be installed using package managers like `apt`, `yum`, or `brew`. You can also download binaries or compile from source.
+
+2. **yq**:
+
+    - **Description**: `yq` is a command-line YAML processor and a wrapper for `jq`. It enables you to manipulate YAML documents similarly to how `jq` works with JSON. `yq` allows you to perform operations like selecting specific paths, updating values, merging documents, and converting between YAML and JSON formats.
+    
+    - **Usage Examples**:
+        - Selecting specific paths: `yq '.path.to.field'`
+        - Updating values: `yq '.path.to.field = "new_value"'`
+        - Merging documents: `yq '.path |= . + {"new_field": "value"}'`
+        - Converting YAML to JSON and vice versa: `yq -y '.'` (YAML to JSON) and `yq -j '.'` (JSON to YAML)
+    
+    - **Installation**: `yq` is available as a standalone binary or as part of the `jq` package. You can install it using package managers like `apt`, `yum`, or `brew`. You can also download binaries or compile from source.
+
+Both `jq` and `yq` are powerful tools for working with JSON and YAML data in command-line environments, providing a wide range of capabilities for data manipulation and processing.
